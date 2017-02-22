@@ -1,0 +1,25 @@
+# Mac
+.DS_Store
+
+# Java Generated
+*.class
+*.jar
+*.war
+*.ear
+
+# gradle
+.gradle/
+bin/
+build/
+target/
+out/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# dependencies
+/node_modules
+/bower_components
+npm-debug.log
