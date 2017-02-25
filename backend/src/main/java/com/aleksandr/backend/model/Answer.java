@@ -4,16 +4,17 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.NotNull;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Answer extends AbstractEntity {
-    @NotNull
-    private @Getter @Setter Long idQuestion;
-    @NotNull
-    private @Getter @Setter Long idVariantOfAnswer;
-    @NotNull
-    private @Getter @Setter Long idTest;
+    @ManyToOne @JoinColumn(name = "idQuestion")
+    private @Getter @Setter Question question;
+    @ManyToOne @JoinColumn(name = "idVariantOfAnswer")
+    private @Getter @Setter VariantOfAnswer variantOfAnswer;
+    @ManyToOne @JoinColumn(name = "idTest")
+    private @Getter @Setter Test test;
 
     public Answer() {
         super();

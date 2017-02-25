@@ -1,4 +1,4 @@
-package com.aleksandr.backend.commons;
+package com.aleksandr.backend.enums;
 
 public enum Role {
     USER,
